@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "746163731012",
+    "project_id": "mess-khojo-ag",
+    "storage_bucket": "mess-khojo-ag.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:746163731012:android:25b2123d213aa664161a11",
+        "android_client_info": {
+          "package_name": "com.messkhojo.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "746163731012-aqkhoeld8am504oq9niid8ghcluj8kbd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.messkhojo.app",
+            "certificate_hash": "a8e4cc1b54a92d10cb60b096ecff148610ab57b6"
+          }
+        },
+        {
+          "client_id": "746163731012-ofvefmag2gvhhsv85gb56u3jc8dtnj4r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeuSnOqmoQlT3e4l0hnVlSE318F04tRiw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "746163731012-ofvefmag2gvhhsv85gb56u3jc8dtnj4r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:746163731012:android:d703ad47461bdac4161a11",
+        "android_client_info": {
+          "package_name": "com.messkhojo.messkhojo_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "746163731012-ofvefmag2gvhhsv85gb56u3jc8dtnj4r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeuSnOqmoQlT3e4l0hnVlSE318F04tRiw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "746163731012-ofvefmag2gvhhsv85gb56u3jc8dtnj4r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
