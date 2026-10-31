@@ -1,4 +1,86 @@
-# Miscellaneous
+﻿# ============================================================
+# FLUTTER / DART / PUB
+# ============================================================
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# ============================================================
+# ANDROID BUILD & LOCAL CONFIG
+# ============================================================
+# Machine-specific SDK paths - never share these
+**/android/local.properties
+
+# Signing config - contains passwords & keystore path
+**/android/key.properties
+
+# Release build artifacts
+/android/app/release/
+/android/.gradle/
+/android/.kotlin/
+
+# ============================================================
+# KEYSTORE / SIGNING FILES - NEVER COMMIT, BACK UP SEPARATELY
+# ============================================================
+**/*.keystore
+**/*.jks
+**/*.keystore.old
+**/*.p12
+
+# ============================================================
+# FIREBASE & GOOGLE SERVICES - SENSITIVE API KEYS
+# ============================================================
+# Regenerate with: flutterfire configure
+**/lib/firebase_options.dart
+
+# Regenerate from Firebase Console
+**/android/app/google-services.json
+
+# iOS equivalent
+**/ios/Runner/GoogleService-Info.plist
+
+# ============================================================
+# COMPILED / RELEASE BINARIES - NEVER PUSH TO GIT
+# ============================================================
+*.apk
+*.aab
+*.ipa
+*.app
+*.dSYM.zip
+*.dSYM
+
+# Debug symbols folder
+/debug-info/
+
+# ============================================================
+# iOS / XCODE
+# ============================================================
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/ephemeral/
+**/ios/Flutter/app.flx
+**/ios/Flutter/app.zip
+**/ios/Flutter/flutter_assets/
+**/ios/ServiceDefinitions.json
+**/ios/Runner/GeneratedPluginRegistrant.*
+**/ios/Runner.xcworkspace/xcuserdata/
+**/ios/*.xcworkspace/xcuserdata/
+**/*.xccheckout
+**/*.moved-aside
+**/*.xcscmblueprint
+
+# ============================================================
+# MISCELLANEOUS
+# ============================================================
 *.class
 *.log
 *.pyc
@@ -11,35 +93,27 @@
 .svn/
 .swiftpm/
 migrate_working_dir/
+.FullName
 
-# IntelliJ related
+# Env files
+*.env
+*.env.local
+
+# IntelliJ / Android Studio
 *.iml
 *.ipr
 *.iws
 .idea/
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
-
-# Flutter/Dart/Pub related
-**/doc/api/
-**/ios/Flutter/.last_build_id
-.dart_tool/
-.flutter-plugins-dependencies
-.pub-cache/
-.pub/
-/build/
-/coverage/
-
-# Symbolication related
+# Obfuscation & symbolication
 app.*.symbols
-
-# Obfuscation related
 app.*.map.json
 
-# Android Studio will place build artifacts here
-/android/app/debug
-/android/app/profile
-/android/app/release
+# ============================================================
+# DOCKER / INFRA - not part of app source
+# ============================================================
+Dockerfile
+.dockerignore
+docker-compose.yml
+nginx.conf
+serve_web.js

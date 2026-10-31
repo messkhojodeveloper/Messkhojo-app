@@ -1,30 +1,26 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:messkhojo_flutter/main.dart';
+import 'package:messkhojo_flutter/widgets/global_error_boundary.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  TestWidgetsFlutterBinding.ensureInitialized();
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+  testWidgets('GlobalErrorBoundary renders branded error UI on widget failure', (WidgetTester tester) async {
+    final errorDetails = FlutterErrorDetails(
+      exception: Exception('Test UI Crash'),
+      library: 'test_library',
+      context: ErrorDescription('while building test widget'),
+    );
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    final errorWidget = GlobalErrorBoundary.buildErrorWidget(errorDetails);
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    await tester.pumpWidget(
+      MaterialApp(
+        home: errorWidget,
+      ),
+    );
+
+    expect(find.text('Something Went Wrong'), findsOneWidget);
+    expect(find.text('Reload App'), findsOneWidget);
   });
 }
